@@ -3,6 +3,7 @@ package com.solera.reservationseureka.reservations;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
@@ -12,8 +13,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Document
 public class ReservationModel implements Serializable {
-    private int IdReserva;
-    private int NumVuelo;
-    private int IdUsuario;
-    private int PosicionAsiento;
+    @Id
+    private int idReserva;
+    private int numVuelo;
+    private int idUsuario;
+    private int posicionAsiento;
 }
